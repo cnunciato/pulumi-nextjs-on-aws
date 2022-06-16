@@ -16,7 +16,7 @@ const service = new aws.apprunner.Service("service", {
         codeRepository: {
             codeConfiguration: {
                 codeConfigurationValues: {
-                    buildCommand: "cd app && npm run build",
+                    buildCommand: "cd app && npm run build && npm run export",
                     port: "3000",
                     runtime: "NODEJS_14",
                     startCommand: "cd app && npm start",
