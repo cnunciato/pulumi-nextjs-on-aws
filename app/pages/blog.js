@@ -10,7 +10,7 @@ export default function Home({ someProp }) {
 
       <main>
         <h1 className="title">
-          Welcome to my dynamic page! YASS.
+          Welcome to my dynamic page! Yo dawg.
         </h1>
 
         <p className="description">
