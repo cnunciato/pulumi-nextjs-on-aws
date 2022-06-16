@@ -9,7 +9,9 @@ const connection = new aws.apprunner.Connection("connection", {
 
 const service = new aws.apprunner.Service("service", {
     serviceName: "my-blog",
+
     sourceConfiguration: {
+        autoDeploymentsEnabled: true,
         authenticationConfiguration: {
             connectionArn: connection.arn,
         },
