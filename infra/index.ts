@@ -2,10 +2,12 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 // https://us-west-2.console.aws.amazon.com/apprunner/home.
-const connection = new aws.apprunner.Connection("connection", {
-    connectionName: "my-connection",
-    providerType: "GITHUB",
-});
+// const connection = new aws.apprunner.Connection("connection", {
+//     connectionName: "my-connection",
+//     providerType: "GITHUB",
+// });
+
+const connection = aws.apprunner.Connection.get("connection", "my-connection", {}, { retainOnDelete: true });
 
 const service = new aws.apprunner.Service("service", {
     serviceName: "my-blog",
