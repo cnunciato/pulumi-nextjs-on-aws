@@ -35,3 +35,5 @@ const service = new aws.apprunner.Service("service", {
         },
     },
 });
+
+export const { serviceUrl } = service;
